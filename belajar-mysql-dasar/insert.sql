@@ -23,3 +23,8 @@ INSERT INTO products(id, name, price, quantity)
 VALUES	('P0003', 'Mie Ayam Ceker', 20000, 100),
 		('P0004', 'Mie Ayam Spesial', 25000, 100),
 		('P0005', 'Mie Ayam Yamin', 15000, 100);
+
+INSERT INTO products(id, name, price, quantity)
+VALUES 	('P0006', 'Tahu Bulat', 5000, 150),
+		('P0007', 'Bakso Original', 10000, 200),
+		('P0006', 'Nasi Goreng', 15000, 150);
