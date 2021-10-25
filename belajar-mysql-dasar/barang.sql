@@ -52,3 +52,9 @@ ADD waktu_dibuat TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
 INSERT INTO barang (id, nama) VALUES (1, 'Apel');
 
 SELECT * FROM barang;
+
+TRUNCATE barang;
+
+SHOW TABLES;
+
+DROP TABLE barang;
