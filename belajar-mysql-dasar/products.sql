@@ -67,6 +67,10 @@ SET category = 'Makanan'
 WHERE id = 'P0001';
 
 UPDATE products
+SET category = 'Makanan'
+WHERE id IN ('P0002', 'P0004', 'P0005');
+
+UPDATE products
 SET category = 'Makanan',
 	description = 'Mie Ayam Original + Ceker'
 WHERE id = 'P0003';
@@ -145,3 +149,7 @@ SELECT * FROM products WHERE price NOT BETWEEN 10000 AND 20000;
 SELECT * FROM products WHERE category IN ('Makanan', 'Minuman');
 
 SELECT * FROM products WHERE category NOT IN ('Makanan', 'Minuman');
+
+SELECT id, category, name FROM products ORDER BY category;
+
+SELECT id, category, price, name FROM products ORDER BY category ASC, price DESC;
