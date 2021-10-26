@@ -419,7 +419,7 @@ FROM
     products;
 
 SELECT 
-    COUNT(id) AS 'Total Product'
+    COUNT(id) AS 'Total Products'
 FROM
     products;
     
@@ -442,3 +442,40 @@ SELECT
     SUM(quantity) AS 'Total Stock'
 FROM
     products;
+
+SELECT 
+    category, COUNT(id) AS 'Total Products'
+FROM
+    products
+GROUP BY category;
+
+SELECT
+    category, MAX(price) AS 'Product Termahal'
+FROM
+    products
+GROUP BY category;
+
+SELECT 
+    category, MIN(price) AS 'Product Termurah'
+FROM
+    products
+GROUP BY category;
+
+SELECT 
+    category, AVG(price) AS 'Rerata Harga'
+FROM
+    products
+GROUP BY category;
+
+SELECT 
+    category, SUM(quantity) AS 'Total Stock'
+FROM
+    products
+GROUP BY category;
+
+SELECT 
+    category, COUNT(id) AS total
+FROM
+    products
+GROUP BY category
+HAVING total > 1;
