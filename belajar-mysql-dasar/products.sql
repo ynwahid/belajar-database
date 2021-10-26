@@ -1,4 +1,5 @@
-CREATE TABLE products(
+CREATE TABLE products
+(
 	id VARCHAR(10) NOT NULL,
     name VARCHAR(100) NOT NULL,
     description TEXT,
@@ -50,3 +51,22 @@ SELECT * FROM products WHERE quantity = 100;
 SELECT * FROM products WHERE price = 15000;
 
 SELECT * FROM products WHERE name = 'mie ayam bakso';
+
+DESCRIBE products;
+
+ALTER TABLE products
+ADD COLUMN category ENUM('Makanan', 'Minuman', 'Lain-lain')
+AFTER name;
+
+SELECT * FROM products;
+
+SELECT * FROM products WHERE id = 'P0001';
+
+UPDATE products
+SET category = 'Makanan'
+WHERE id = 'P0001';
+
+UPDATE products
+SET category = 'Makanan',
+	description = 'Mie Ayam Original + Ceker'
+WHERE id = 'P0003';
