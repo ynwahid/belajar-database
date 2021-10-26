@@ -479,3 +479,31 @@ FROM
     products
 GROUP BY category
 HAVING total > 1;
+
+SELECT 
+    *
+FROM
+    products;
+
+INSERT INTO products(id, name, category, price, quantity)
+VALUES ('P0016', 'Permen', 'Lain-lain', 500, 1000);
+
+UPDATE products 
+SET 
+    price = 1000
+WHERE
+    id = 'P0016';
+
+ALTER TABLE products
+ADD CONSTRAINT price_check CHECK (price >= 1000);
+
+SHOW CREATE TABLE products;
+
+INSERT INTO products (id, name, category, price, quantity)
+VALUES ('P0017', 'Permen Lagi', 'Lain-lain', 500, 1000);
+
+UPDATE products 
+SET 
+    price = 500
+WHERE
+    id = 'P0016';
