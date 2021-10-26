@@ -389,3 +389,31 @@ SELECT
     MONTH(created_at) AS Month
 FROM
     products;
+    
+SELECT 
+    id,
+    category,
+    CASE category
+        WHEN 'makanan' THEN 'enak'
+        WHEN 'minuman' THEN 'segar'
+    END AS 'Category'
+FROM
+    products;
+    
+SELECT 
+    id,
+    price,
+    IF(price <= 15000,
+        'Murah',
+        IF(price <= 20000,
+            'Mahal',
+            'Mahal Banget')) AS 'Apakah Mahal?'
+FROM
+    products;
+
+SELECT 
+    id,
+    name,
+    IFNULL(description, 'Kosong') AS 'Deskripsi IFNULL'
+FROM
+    products;
