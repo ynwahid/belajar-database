@@ -74,3 +74,10 @@ WHERE id = 'P0003';
 UPDATE products
 SET price = price + 5000
 WHERE id = 'P0005';
+
+INSERT INTO products(id, name, price, quantity)
+VALUES ('P0009', 'Mie Ayam Original', 15000, 100);
+
+DELETE
+FROM products
+WHERE id = 'P0009';
