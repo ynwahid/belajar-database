@@ -44,3 +44,9 @@ SHOW CREATE TABLE products;
 
 INSERT INTO products(id, name, price, quantity)
 VALUES ('P0001', 'Mie Ayam Original', 15000, 100);
+
+SELECT * FROM products WHERE quantity = 100;
+
+SELECT * FROM products WHERE price = 15000;
+
+SELECT * FROM products WHERE name = 'mie ayam bakso';
