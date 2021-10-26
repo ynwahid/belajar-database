@@ -70,3 +70,7 @@ UPDATE products
 SET category = 'Makanan',
 	description = 'Mie Ayam Original + Ceker'
 WHERE id = 'P0003';
+
+UPDATE products
+SET price = price + 5000
+WHERE id = 'P0005';
