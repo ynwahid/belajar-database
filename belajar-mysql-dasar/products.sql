@@ -353,9 +353,9 @@ SELECT
 FROM
     products;
 
-SELECT pi();
+SELECT PI();
 
-SELECT power(10, 2);
+SELECT POWER(10, 2);
 
 SELECT 
     id, COS(price), SIN(price), TAN(price)
@@ -365,3 +365,11 @@ FROM
 SELECT id, name, price
 FROM products
 WHERE price DIV 1000 > 15;
+
+SELECT 
+    id,
+    LOWER(name) AS 'Name Lower',
+    UPPER(name) AS 'Name Upper',
+    LENGTH(name) AS 'Name Length'
+FROM
+    products;
