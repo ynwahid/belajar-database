@@ -28,3 +28,4 @@ VALUES ('cakcup@gmail.com', 'Yusuf', 'Wahid');
 
 SELECT last_insert_id();
 
+DESC customers;
