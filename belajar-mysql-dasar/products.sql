@@ -541,3 +541,13 @@ FROM
     products
 WHERE
     MATCH (name , description) AGAINST ('bakso' WITH QUERY EXPANSION);
+    
+DESCRIBE products;
+
+SELECT 
+    *
+FROM
+    products;
+
+INSERT INTO products(id, name, category, price, quantity)
+VALUES ('Pxxxx', 'Contoh', 'Lain-lain', 1000, 1000);
