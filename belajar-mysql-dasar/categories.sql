@@ -66,3 +66,67 @@ FROM
     products AS p
         JOIN
     categories AS c ON (c.id = p.id_category);
+    
+SELECT 
+    *
+FROM
+    categories;
+    
+INSERT INTO categories(id, name)
+VALUES 	('C0004', 'Oleh-oleh'),
+		('C0005', 'Gadget');
+        
+SELECT 
+    *
+FROM
+    categories
+        INNER JOIN
+    products ON (products.id_category = categories.id);
+
+SELECT 
+    *
+FROM
+    categories
+        LEFT JOIN
+    products ON (products.id_category = categories.id);
+
+SELECT 
+    *
+FROM
+    categories
+        RIGHT JOIN
+    products ON (products.id_category = categories.id);
+
+SELECT 
+    *
+FROM
+    categories
+        CROSS JOIN
+    products;
+
+CREATE TABLE numbers (
+    id INT NOT NULL,
+    PRIMARY KEY (id)
+)  ENGINE=INNODB;
+
+INSERT INTO numbers(id)
+VALUES (1),
+	   (2),
+	   (3),
+	   (4),
+	   (5),
+	   (6),
+	   (7),
+	   (8),
+	   (9),
+	   (10);
+
+SELECT 
+    numbers1.id AS num1_id,
+    numbers2.id AS num2_id,
+    (numbers1.id * numbers2.id) AS result
+FROM
+    numbers AS numbers1
+        CROSS JOIN
+    numbers AS numbers2
+ORDER BY numbers1.id , numbers2.id;

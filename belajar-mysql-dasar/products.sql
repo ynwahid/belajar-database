@@ -551,3 +551,8 @@ FROM
 
 INSERT INTO products(id, name, category, price, quantity)
 VALUES ('Pxxxx', 'Contoh', 'Lain-lain', 1000, 1000);
+
+INSERT INTO products(id, name, price, quantity)
+VALUES ('X0001', 'X Satu', 25000, 200),
+	   ('X0002', 'X Dua', 10000, 300),
+       ('X0003', 'X Tiga', 15000, 500);
