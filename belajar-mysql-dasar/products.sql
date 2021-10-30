@@ -556,3 +556,38 @@ INSERT INTO products(id, name, price, quantity)
 VALUES ('X0001', 'X Satu', 25000, 200),
 	   ('X0002', 'X Dua', 10000, 300),
        ('X0003', 'X Tiga', 15000, 500);
+
+SELECT 
+    *
+FROM
+    products
+WHERE
+    price > (SELECT 
+            AVG(price)
+        FROM
+            products);
+
+SELECT 
+    MAX(price)
+FROM
+    products;
+
+SELECT 
+    *
+FROM
+    products;
+
+SELECT 
+    MAX(cp.price)
+FROM
+    (SELECT 
+        price
+    FROM
+        categories
+    JOIN products ON (products.id_category = categories.id)) AS cp;
+
+UPDATE products 
+SET 
+    price = 1000000
+WHERE
+    id = 'X0003';
